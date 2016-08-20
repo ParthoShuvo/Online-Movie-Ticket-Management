@@ -1,0 +1,17 @@
+While using the PACKAGES:
+
+01. I have added a column:
+
+	ALTER TABLE PURCHASE_TICKETS
+	ADD movieId INTEGER CONSTRAINT PURCHASE_TICKETS_movieName_fk REFERENCES MOVIES	(movieId) ON DELETE CASCADE;
+
+
+02. While passing a list as String DO NOT use blank_spaces after comma
+	Wrong: "LA05, UB05, UC06, LE54"
+	Correct: "LA05,UB05,UC06,LE54"
+03. Al PROCEDURES use dates as 'DD-MON-YY' e.g. '31-JUL-16' 
+    ******BUT*****
+	seat_booking.book_seats expects a date as 'DD-MON-YYYY' e.g. '31-JUL-2016'
+	Though it won't create any ERROR but Oracle will save the year as 16 instead of 2016
+04. Compile the UTIL PACKAGE at first.
+05. There is a file sequences.sql create these SEQUENCE(s) before trying to use edit_data PACKAGE.

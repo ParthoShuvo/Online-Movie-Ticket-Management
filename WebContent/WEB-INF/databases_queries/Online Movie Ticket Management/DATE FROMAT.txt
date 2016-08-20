@@ -1,0 +1,15 @@
+######SHOWTIME########
+
+1-> 11:00 am
+2-> 1:45 pm
+3-> 4:30 pm
+4-> 7:15 pm
+
+N.B: try to place this time as 24 hours format
+
+Example:
+DATE = 31-JUL-16
+TIME = 11:00am
+
+SAVE to DATABASE as like as ----> 31-JUL-16 11:00:00
+

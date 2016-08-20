@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <welcome-file-list>
+    <welcome-file>home</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Home Page</servlet-name>
+    <jsp-file>/pages/web/index.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home Page</servlet-name>
+    <url-pattern>/home_page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Movie Trailers Page</servlet-name>
+    <jsp-file>/pages/web/movie_trailer_page.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Movie Trailers Page</servlet-name>
+    <url-pattern>/movie_trailer_page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Movie List Page</servlet-name>
+    <jsp-file>/pages/web/movie_list_page.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Movie List Page</servlet-name>
+    <url-pattern>/movie_list_page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Movie Info Page</servlet-name>
+    <jsp-file>/pages/web/movie_page.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Movie Info Page</servlet-name>
+    <url-pattern>/movie_page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Final Ticket Page</servlet-name>
+    <jsp-file>/pages/web/final_ticket_page.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Final Ticket Page</servlet-name>
+    <url-pattern>/final_ticket</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Booking Step2 Page</servlet-name>
+    <jsp-file>/pages/web/booking_step2_page.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Booking Step2 Page</servlet-name>
+    <url-pattern>/booking_step2_page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Booking Step3 Page</servlet-name>
+    <jsp-file>/pages/web/booking_step3_page.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Booking Step3 Page</servlet-name>
+    <url-pattern>/booking_step3_page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Error Page</servlet-name>
+    <jsp-file>/pages/web/error.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Error Page</servlet-name>
+    <url-pattern>/error</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MovieListControllerServlet</servlet-name>
+    <servlet-class>io.github.parthoshuvo.controllers.MovieListControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MovieListControllerServlet</servlet-name>
+    <url-pattern>/movielist</url-pattern>
+    <url-pattern>/movie-trailer</url-pattern>
+    <url-pattern>/home</url-pattern>
+    <url-pattern></url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BookingTicketStepController</servlet-name>
+    <servlet-class>io.github.parthoshuvo.controllers.BookingTicketStepController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookingTicketStepController</servlet-name>
+    <url-pattern>/booking_step2</url-pattern>
+    <url-pattern>/booking_step3</url-pattern>
+    <url-pattern>/submit_selected_seats</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MovieInfoControllerServlet</servlet-name>
+    <servlet-class>io.github.parthoshuvo.controllers.MovieInfoControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MovieInfoControllerServlet</servlet-name>
+    <url-pattern>/movie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PurchaseTicketControllerServlet</servlet-name>
+    <servlet-class>io.github.parthoshuvo.controllers.PurchaseTicketControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PurchaseTicketControllerServlet</servlet-name>
+    <url-pattern>/purchase_ticket</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>MovieListRequestFilter</filter-name>
+    <filter-class>io.github.parthoshuvo.controllers.filters.MovieListRequestFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MovieListRequestFilter</filter-name>
+    <servlet-name>MovieListControllerServlet</servlet-name>
+  </filter-mapping>
+  <filter>
+    <filter-name>MovieInfoRequestFilter</filter-name>
+    <filter-class>io.github.parthoshuvo.controllers.filters.MovieInfoRequestFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MovieInfoRequestFilter</filter-name>
+    <servlet-name>MovieInfoControllerServlet</servlet-name>
+  </filter-mapping>
+  <filter>
+    <filter-name>BookingTicketRequestFilter</filter-name>
+    <filter-class>io.github.parthoshuvo.controllers.filters.BookingTicketRequestFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>BookingTicketRequestFilter</filter-name>
+    <servlet-name>BookingTicketStepController</servlet-name>
+  </filter-mapping>
+  <filter>
+    <filter-name>PurchaseTicketRequestFilter</filter-name>
+    <filter-class>io.github.parthoshuvo.controllers.filters.PurchaseTicketRequestFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PurchaseTicketRequestFilter</filter-name>
+    <servlet-name>PurchaseTicketControllerServlet</servlet-name>
+  </filter-mapping>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/pages/web/error.jsp</location>
+  </error-page>
+</web-app>

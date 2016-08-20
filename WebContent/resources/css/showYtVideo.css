@@ -1,0 +1,52 @@
+.youtube-modal {
+	/* padding: 50px; */
+	left: 50%;
+	top: 50%;
+	position: fixed;
+	z-index: 500;
+	background: #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.youtube-modal.size-m {
+	width: 600px;
+	height: 400px;
+}
+
+.youtube-modal.size-l {
+	width: 700px;
+	height: 500px;
+}
+
+.youtube-modal.size-s {
+	width: 500px;
+	height: 300px;
+}
+
+.youtube-modal-bg {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.youtube-modal-close {
+	color: #b1b0ac;
+	font-size: 30px;
+	line-height: .5;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.youtube-modal-close:hover {
+	color: #e72626;
+}

@@ -1,0 +1,1 @@
+http://localhost:8085/SimpleJSPProject/ticket_purchase/booking_step2?movie_name=Zootopia(2016)_1&date=07/31/2016&time=11:00_am&hall=1&category=1
